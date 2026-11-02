@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+# Real PPDs, documents, printer logs and local captures must stay private.
+*.ppd
+*.pdf
+*.ps
+*.urf
+*.pwg
+*.log
+*.png
+*.jpg
+*.ppm
+private/
+local/
+.DS_Store

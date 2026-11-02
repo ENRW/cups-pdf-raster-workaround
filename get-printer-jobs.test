@@ -1,0 +1,15 @@
+# Read recent device-side jobs. Does not submit, restart, or cancel any job.
+# Usage: ipptool -T 10 -tv 'ipp://YOUR_PRINTER/ipp/print' get-printer-jobs.test
+# Job titles and usernames are deliberately not requested.
+{
+    NAME "Read device-side job counters"
+    OPERATION Get-Jobs
+    GROUP operation-attributes-tag
+    ATTR charset attributes-charset utf-8
+    ATTR language attributes-natural-language en
+    ATTR uri printer-uri $uri
+    ATTR keyword which-jobs all
+    ATTR integer limit 20
+    ATTR keyword requested-attributes job-id,job-state,job-state-reasons,job-impressions-completed,job-media-sheets-completed
+    STATUS successful-ok
+}
